@@ -2,17 +2,17 @@
 let i=1;
 document.getElementById("next").addEventListener("click", ()=>{
 	   i++;
-	    if(i==1){
-			document.getElementById("prev").style.display="none";
+	   if(i==1){
+			document.getElementById("prev").disabled=true;
 		}
-	   else{
-		  document.getElementById("prev").style.display="block"; 
+	else{
+		  document.getElementById("prev").disabled=false; 
 	   }
 	    if(i==5){
-			document.getElementById("next").style.display="none";
+			document.getElementById("next").disabled=true;
 		}
-	   else{
-		   document.getElementById("next").style.display="block";
+	else{
+		   document.getElementById("next").disabled=false;
 	   }
         
 	   
@@ -21,16 +21,16 @@ document.getElementById("next").addEventListener("click", ()=>{
 document.getElementById("prev").addEventListener("click", ()=>{
 	   i--;
 	   if(i==1){
-			document.getElementById("prev").style.display="none";
+			document.getElementById("prev").disabled=true;
 		}
 	else{
-		  document.getElementById("prev").style.display="block"; 
+		  document.getElementById("prev").disabled=false; 
 	   }
 	    if(i==5){
-			document.getElementById("next").style.display="none";
+			document.getElementById("next").disabled=true;
 		}
 	else{
-		   document.getElementById("next").style.display="block";
+		   document.getElementById("next").disabled=false;
 	   }
 	
 	 document.getElementById(`circle-${i+1}`).classList.remove("active");
